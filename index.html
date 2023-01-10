@@ -1,39 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-     <title>Form Template</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/forms.css">
- </head>
- <body>
-     <header>
-     <h1 class="page-header">Form Template</h1>
-        <nav class="topnav" id="myTopnav">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Link</a>
-            <a href="#">Link</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-        </nav>
-     </header>
-     
-   <main class="wrapper">
- 
-    <h2 class="subheader">Place form code below:</h2>
-    <p>form goes here</p>
-    <h3>Page Origins</h3>
-    <p>The HTML/CSS comes from Sara Newman's Web Fundamentals class as taught at Seattle Central. This page provides a basis for students to build a responsive portal page.</p>
-    <p>The mobile navigation originates from <a href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp" target="_blank">W3Schools</a></p>
-    <footer>
-      <p><small>&copy; 2021-<span id="this-year"></span> by 
-          YOUR NAME HERE, All Rights Reserved ~ 
-          <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
-          <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
-     </p>
-    </footer>
-  </main>
-  <script src="js/main.js"></script>   
- </body>
+	<head>
+		<title>Form Template</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/nav.css" />
+		<link rel="stylesheet" href="css/forms.css" />
+	</head>
+	<body>
+		<header>
+			<h1 class="page-header">Form Template</h1>
+			<nav class="topnav" id="myTopnav">
+				<a href="index.html" class="active">Home</a>
+				<a href="#">Link</a>
+				<a href="#">Link</a>
+				<a href="javascript:void(0);" class="icon" onclick="myFunction()"
+					>&#9776;</a
+				>
+			</nav>
+		</header>
+
+		<main class="wrapper">
+			<h2 class="subheader">Place form code below:</h2>
+			<form action="/submit-form" method="get">
+				<label for="name">Name:</label><br />
+				<input
+					type="text"
+					id="name"
+					name="name"
+					required
+					placeholder="Enter your name"
+				/><br />
+				<label for="email">Email:</label><br />
+				<input
+					type="email"
+					id="email"
+					name="email"
+					required
+					placeholder="Enter your email"
+				/><br />
+				<label for="password">Password:</label><br />
+				<input
+					type="password"
+					id="password"
+					name="password"
+					required
+					minlength="8"
+					placeholder="Enter your password"
+				/><br />
+				<label for="gender">Gender:</label><br />
+				<input type="radio" id="male" name="gender" value="male" required />
+				<label for="male">Male</label><br />
+				<input type="radio" id="female" name="gender" value="female" required />
+				<label for="female">Female</label><br />
+				<input type="radio" id="other" name="gender" value="other" required />
+				<label for="other">Other</label><br />
+				<label for="hobbies">Hobbies:</label><br />
+				<input
+					type="checkbox"
+					id="reading"
+					name="hobbies"
+					value="reading"
+					required
+				/>
+				<label for="reading">Reading</label><br />
+				<input
+					type="checkbox"
+					id="writing"
+					name="hobbies"
+					value="writing"
+					required
+				/>
+				<label for="writing">Writing</label><br />
+				<input
+					type="checkbox"
+					id="drawing"
+					name="hobbies"
+					value="drawing"
+					required
+				/>
+				<label for="drawing">Drawing</label><br />
+				<label for="country">Country:</label><br />
+				<select id="country" name="country" required>
+					<option value="">Select a country</option>
+					<option value="USA">USA</option>
+					<option value="Canada">Canada</option>
+					<option value="Mexico">Mexico</option>
+				</select>
+        <br />
+				<label for="message">Message:</label><br />
+				<textarea
+					id="message"
+					name="message"
+					required
+					placeholder="Enter your message"
+				></textarea>
+        <br />
+
+				<input type="submit" value="Submit" />
+			</form>
+			<footer>
+				<p>
+					<small
+						>&copy; 2021-<span id="this-year"></span> by Bryan Barreto All
+						Rights Reserved ~
+				
+					
+				</p>
+			</footer>
+		</main>
+		<script src="js/main.js"></script>
+	</body>
 </html>
