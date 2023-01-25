@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Form Template</title>
+		<title>Data Processing</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" href="css/nav.css" />
-		<link rel="stylesheet" href="css/forms.css" />
+		<link rel="stylesheet" href="css/main-form.css" />
+		<link rel="stylesheet" href="css/data-processing.css" />
 	</head>
 	<body>
 		<header>
-			<h1 class="page-header">Form Template</h1>
+			<h1 class="page-header">Data Processing</h1>
 			<nav class="topnav" id="myTopnav">
 				<a href="index.html" class="active">Home</a>
 				<a href="#">Link</a>
@@ -22,94 +23,176 @@
 		</header>
 
 		<main class="wrapper">
-			<h2 class="subheader">Place form code below:</h2>
-			<form action="/submit-form" method="get">
-				<label for="name">Name:</label><br />
-				<input
-					type="text"
-					id="name"
-					name="name"
-					required
-					placeholder="Enter your name"
-				/><br />
-				<label for="email">Email:</label><br />
-				<input
-					type="email"
-					id="email"
-					name="email"
-					required
-					placeholder="Enter your email"
-				/><br />
-				<label for="password">Password:</label><br />
-				<input
-					type="password"
-					id="password"
-					name="password"
-					required
-					minlength="8"
-					placeholder="Enter your password"
-				/><br />
-				<label for="gender">Gender:</label><br />
-				<input type="radio" id="male" name="gender" value="male" required />
-				<label for="male">Male</label><br />
-				<input type="radio" id="female" name="gender" value="female" required />
-				<label for="female">Female</label><br />
-				<input type="radio" id="other" name="gender" value="other" required />
-				<label for="other">Other</label><br />
-				<label for="hobbies">Hobbies:</label><br />
-				<input
-					type="checkbox"
-					id="reading"
-					name="hobbies"
-					value="reading"
-					required
-				/>
-				<label for="reading">Reading</label><br />
-				<input
-					type="checkbox"
-					id="writing"
-					name="hobbies"
-					value="writing"
-					required
-				/>
-				<label for="writing">Writing</label><br />
-				<input
-					type="checkbox"
-					id="drawing"
-					name="hobbies"
-					value="drawing"
-					required
-				/>
-				<label for="drawing">Drawing</label><br />
-				<label for="country">Country:</label><br />
-				<select id="country" name="country" required>
-					<option value="">Select a country</option>
-					<option value="USA">USA</option>
-					<option value="Canada">Canada</option>
-					<option value="Mexico">Mexico</option>
-				</select>
-        <br />
-				<label for="message">Message:</label><br />
-				<textarea
-					id="message"
-					name="message"
-					required
-					placeholder="Enter your message"
-				></textarea>
-        <br />
+			<div id="output">
+				<form method="get" action="" class="main-form">
+					<h3>
+						Demonstrates data processing of query string data using client side
+						JS
+					</h3>
+					<h2 class="subheader">Cart</h2>
+					<div id="widgets">
+						<div>
+							<b>Widget</b><br />
+							<p>Our Widgets are spring loaded and need no batteries!</p>
+							<p>At $3.99 they're a bargain!</p>
+							<p>
+								<label
+									><input type="checkbox" name="Cart" value="Widget" /> Add to
+									Cart</label
+								>
+							</p>
+							<div class="pic"><img src="images/widget.png" /></div>
+						</div>
+						<div>
+							<b>Sprocket</b><br />
+							<p>
+								Our Sprockets are well made and hold up to extreme pressure!
+							</p>
+							<p>They only cost $5.99!</p>
+							<p>
+								<label
+									><input type="checkbox" name="Cart" value="Sprocket" /> Add to
+									Cart</label
+								>
+							</p>
+							<div class="pic"><img src="images/sprocket.png" /></div>
+						</div>
+						<div>
+							<b>Thingy</b><br />
+							<p>
+								Our Thingys have many uses, and people come up with new ones all
+								the time!
+							</p>
+							<p>Such a deal at $1.99!</p>
+							<p>
+								<label
+									><input type="checkbox" name="Cart" value="Thingy" /> Add to
+									Cart</label
+								>
+							</p>
+							<div class="pic"><img src="images/thingy.png" /></div>
+						</div>
+					</div>
 
-				<input type="submit" value="Submit" />
-			</form>
+					<h2 class="subheader">Shipping Info:</h2>
+
+					<div>
+						<label for="FirstName">First Name</label><br />
+						<input
+							placeholder="Enter First Name "
+							type="text"
+							name="First_Name"
+							id="name"
+							required
+							autofocus
+						/>
+					</div>
+
+					<div>
+						<label for="LastName">Last Name</label><br />
+						<input
+							placeholder="Enter Last Name "
+							type="text"
+							name="Last_Name"
+							id="name"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="Email">Email</label><br />
+						<input
+							placeholder="Enter Email"
+							type="Email"
+							name="Email"
+							id="Email"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="Address">Address</label><br />
+						<input
+							placeholder="Enter Address "
+							type="text"
+							name="Address "
+							id="Address"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="Phone">Phone</label><br />
+						<input
+							placeholder="xxx-xxx-xxxx"
+							type="tel"
+							id="phone"
+							name="phone"
+							pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="City">City</label><br />
+						<input
+							placeholder="Enter City"
+							type="text"
+							name="City "
+							id="City"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="State">State</label><br />
+						<select name="State" id="State">
+							<option value="">Please Select State</option>
+							<option value="AK">Alaska</option>
+							<option value="CA">California</option>
+							<option value="OR">Oregon</option>
+							<option value="WA">Washington</option>
+						</select>
+					</div>
+
+					<div>
+						<label for="PostalCode">Postal Code</label><br />
+						<input
+							placeholder="Postal Code "
+							type="text"
+							name="Postal_Code "
+							id="PostalCode"
+							required
+						/>
+					</div>
+
+					<div>
+						<label for="Notes"> Notes </label>
+						<textarea
+							name="Notes"
+							id="Notes"
+							placeholder="Notes"
+							cols="36"
+							rows="4"
+						></textarea>
+					</div>
+					<div>
+						<input type="submit" value="Submit it!" />
+					</div>
+				</form>
+			</div>
 			<footer>
 				<p>
 					<small
-						>&copy; 2021-<span id="this-year"></span> by Bryan Barreto All
+						>&copy; 2021-<span id="this-year"></span> by Bryan Barreto, All
 						Rights Reserved ~
-				
-					
+						<a id="html-checker" href="#" target="_blank">Check HTML</a> ~
+						<a id="css-checker" href="#" target="_blank">Check CSS</a></small
+					>
 				</p>
 			</footer>
 		</main>
 		<script src="js/main.js"></script>
+		<script src="js/data-processing.js"></script>
 	</body>
 </html>
